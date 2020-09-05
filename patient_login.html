@@ -2,8 +2,24 @@
 <html>
     <head>
         <title>Telesafe</title>
+        <link rel="stylesheet" href="./stylesheets/patient_login.css">
     </head>
     <body>
-        <p>hello world</p>
+        <div class="flex-container">
+            <div class="flex-item1">
+                <div class="login-container">
+                    <span class="welcome">Welcome to Telesafe</span>
+                    <div class="login-info">
+                        <input type="text" id="uname" placeholder="Username">
+                        <input type="text" id="pword" placeholder="Password"><br>
+                        <button type="button" id="login-button" onclick="window.location.href='./patient_dashboard.html'">Login</button><br>
+                        <a href="./doctor_dashboard.html">Login as a healthcare professional or facilitator</a>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-item2">
+                New Here?
+            </div>
+        </div>
     </body>
 </html>

@@ -1,0 +1,99 @@
+body {
+    background-color: #377381;
+}
+
+.container {
+    display: flex;
+    align-content: center;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    width: 90%;
+   
+}
+
+
+.flex-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .flex-item1 {
+    background: #f2f2f2;
+    padding: 5px;
+    width: 800px;
+    height: 850px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .flex-item2 {
+    background: #c4c4c4;
+    padding: 5px;
+    width: 400px;
+    height: 850px;
+    margin-top: 10px;
+    line-height: 150px;
+    color: black;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  .login-container {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .welcome {
+    text-align: center;
+    font-family: sans-serif;
+    color: #5a5a5a;
+      
+  }
+
+  .login-info {
+      text-align: center;
+  }
+  
+  input {
+      background: #e4e4e4;
+      width: 419px;
+      height: 55px;
+      border: 1px solid #9b9b9b;
+      font-size: 24px;
+      margin: 0;
+      padding: 0;
+  }
+
+  #login-button {
+      background: #668e6c;
+      border: 1px solid black;
+      border-radius: 17px;
+      width: 354px;
+      height: 99px;
+
+      font-family: serif;
+      font-family: Poly;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 48px;
+      line-height: 57px;
+      color: white;
+  }
+
+  a {
+      font-size: 24px;
+      text-align: center;
+      color: #878787;
+  }
