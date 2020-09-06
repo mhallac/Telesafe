@@ -5,7 +5,7 @@ Telesafe is a closed-network medium to connect with other members of an individu
 
 <h2>Running Instructions</h2>
 
-export GOOGLE_APPLICATION_CREDENTIALS="/c/Users/mhall/OneDrive/desktop/Telesafe/server/apikey.json"
-export FLASK_APP="sentiment.py"
+export GOOGLE_APPLICATION_CREDENTIALS="/c/Users/mhall/OneDrive/desktop/Telesafe/server/apikey.json"<br>
+export FLASK_APP="sentiment.py"<br>
 flask run
 
