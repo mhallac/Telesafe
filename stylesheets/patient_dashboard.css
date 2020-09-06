@@ -10,6 +10,15 @@ body {
   margin: 0;
   
 }
+.welcome-banner {
+  background-color: #c4c4c4;
+  width: 1200px;
+  height: 70px;
+  font-size: 48px;
+  font-family: sans-serif;
+  margin-top: 20px;
+}
+
 
 .wrapper-item {
   width: 1208px;
@@ -17,6 +26,26 @@ body {
   background: #f2f2f2;
   text-align: center;
   margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content-col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+input {
+  margin-top: 50px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  margin-top: 50px;
+  width: 10%;
   margin-left: auto;
   margin-right: auto;
 }

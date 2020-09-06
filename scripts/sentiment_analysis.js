@@ -1,38 +1,20 @@
 function analyze() {
-    console.log(document.getElementById("inSent").value);    
-}
+    fetch('http://127.0.0.1:5000/analyze', {
 
-function postData(input) {
-    $.ajax({
-        type: "POST",
-        url: "/test_sentiment.py",
-        data: { param: input },
-        success: callbackFunc
-    });
-}
+        // Specify the method
+        method: 'POST',
 
-function callbackFunc(response) {
-    // do something with the response
-    console.log(response);
-}
-
-postData('data to process');
-
-// GET is the default method, so we don't need to set it
-fetch('./test_sentiment.py')
-    .then(function (response) {
+        // A JSON payload
+        body: JSON.stringify({
+        "greeting": "Hello from the browser!"
+        })
+        }).then(function (response) { // At this point, Flask has printed our JSON
         return response.text();
-    }).then(function (text) {
-        console.log('GET response text:');
-        console.log(text); // Print the greeting as text
-    });
+        }).then(function (text) {
 
-// Send the same request
-fetch('./test_sentiment.py')
-    .then(function (response) {
-        return response.json(); // But parse it as JSON this time
-    })
-    .then(function (json) {
-        console.log('GET response as JSON:');
-        console.log(json); // Here’s our JSON object
-    })
+        console.log('POST response: ');
+
+        // Should be 'OK' if everything was successful
+        console.log(text);
+    });         
+}

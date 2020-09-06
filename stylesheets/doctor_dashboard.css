@@ -1,0 +1,44 @@
+body {
+    background-color: #377381;
+}
+
+.flex-container {
+    width: 1200px;
+    height: 850px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+}
+
+.welcome-banner {
+    background-color: #c4c4c4;
+    width: 1200px;
+    height: 70px;
+    font-size: 48px;
+    font-family: sans-serif;
+    margin-top: 20px;
+}
+
+.patient-table {
+    display: flex;
+    flex-direction: column;
+    height: 551px;
+    width: 345px;
+    background-color: #ffc0c0;
+    flex-wrap: nowrap;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.patient-item {
+    width: 90%;
+    height: 50px;
+    background-color: red;
+}
+
+button {
+    margin: auto;
+}
+
