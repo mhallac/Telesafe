@@ -7,17 +7,26 @@ import json
 
 from collections import OrderedDict
 
+from math import floor
+
+
+def scaledColor(sentimentScore):
+    scaled = int(floor(((sentimentScore + 1) / 2.0) * 255))
+
+    r = 255 - scaled
+    g = scaled
+    b = 0
+
+    return "#%02x%02x%02x" % (r, g, b)
 
 
 
 patientDict = OrderedDict();
-patientDict["rweasley"] = [0.5, 1]
-patientDict["hpotter"] = [-0.2, 2]
-patientDict["hgranger"] = [0.7, 10]
-patientDict["adumbledore"] = [1.0, 100]
-patientDict["tvoldemort"] = [-1.0, 100]
-
-
+patientDict["rweasley"] = [0.5, 1, scaledColor(0.5)]
+patientDict["hpotter"] = [-0.2, 2, scaledColor(-0.2)]
+patientDict["hgranger"] = [0.7, 10, scaledColor(0.7)]
+patientDict["adumbledore"] = [1.0, 100, scaledColor(1.0)]
+patientDict["tvoldemort"] = [-1.0, 100, scaledColor(-1.0)]
 
 
 
@@ -50,7 +59,7 @@ def analyze():
         return 'OK', 200
     # GET request
     else:
-        return patientDict[uname][0]  # serialize and use JSON headers
+        return dict2json()
 
 
 def lang_anal(text):
