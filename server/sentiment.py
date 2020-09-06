@@ -9,7 +9,45 @@ from collections import OrderedDict
 
 from math import floor
 
+def scaledColor(sentimentScore):
+    scaled = int(abs(sentimentScore) * 255)
 
+    if sentimentScore > 0:
+        r = 255 - scaled
+        g = 255
+        b = 0
+    elif sentimentScore < 0:
+        r = 255
+        g = 255-scaled
+        b = 0
+    else:
+        r = 255
+        g = 255
+        b = 0
+
+    return "#%02x%02x%02x" % (r, g, b)
+
+'''
+def scaledColor(sentimentScore):
+    scaled = int(floor(((sentimentScore + 1) / 2.0) * 255))
+
+    if sentimentScore > 0:
+        r = 255 - scaled
+        g = 175
+        b = 0
+    elif sentimentScore < 0:
+        r = 175
+        g = scaled
+        b = 0
+    else:
+        r = 255
+        g = 255
+        b = 0
+
+    return "#%02x%02x%02x" % (r, g, b)
+
+'''
+'''
 def scaledColor(sentimentScore):
     scaled = int(floor(((sentimentScore + 1) / 2.0) * 255))
 
@@ -18,7 +56,7 @@ def scaledColor(sentimentScore):
     b = 0
 
     return "#%02x%02x%02x" % (r, g, b)
-
+'''
 
 
 patientDict = OrderedDict();

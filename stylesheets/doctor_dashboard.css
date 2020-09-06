@@ -37,9 +37,15 @@ body {
     height: 50px;
     font-size: 125%;
     font-family: sans-serif;
+    font-weight: bold;
 }
 
 button {
     margin: auto;
+    text-align: center;
+    margin-left: 550px;
 }
 
+#patient-list-info {
+    font-size: 150%
+}
