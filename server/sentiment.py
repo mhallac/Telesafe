@@ -89,4 +89,5 @@ def updateDict(uname, msg):
     # store new sentiment data
     patientDict[uname][0] = avgSent
     patientDict[uname][1] = numMsg + 1
+    patientDict[uname][2] = scaledColor(avgSent)
 
