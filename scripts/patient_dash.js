@@ -1,16 +1,19 @@
-function analyze(uname) {
+function analyze() {
     console.log("analyzing");
-    console.log(document.getElementById("RonSad").value);
+
+
+    const data = { uname: document.getElementById("pname").value, msg: document.getElementById("RonSad").value };
+    console.log(data);
+
     fetch('http://127.0.0.1:5000/analyze', {
 
         // Specify the method
         method: 'POST',
-
+        headers: {
+            'Content-Type': 'application/json',
+        },
         // A JSON payload
-        body: JSON.stringify({
-        "uname": "Weasley, Ron",
-        "text" : document.getElementById("RonSad").value
-        })
+        body: JSON.stringify(data)
         }).then(function (response) { // At this point, Flask has printed our JSON
         return response.text();
         }).then(function (text) {
